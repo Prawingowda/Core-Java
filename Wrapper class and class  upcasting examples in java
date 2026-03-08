@@ -1,0 +1,95 @@
+wrapper class
+byte
+short
+Integer
+long
+Float
+double
+character
+
+// I want to covert String to Integer
+
+package P1;
+
+public class A {
+	public static void main(String[] args) {
+		String x = "10";
+		int y = Integer.parseInt(x);
+		System.out.println(y);
+		
+	}
+
+}
+output 
+10
+//
+I want to covert string to double
+package P1;
+
+public class A {
+	public static void main(String[] args) {
+		String x = "10.3";
+		double y = Double.parseDouble(x);
+		System.out.println(y);
+		
+	}
+
+}
+
+/// NOW  lets try on NumberFormatException
+package P1;
+public class A {
+	public static void main(String[] args) {
+		try {
+			String x = "10.3dasasad";
+			double y = Double.parseDouble(x);
+			System.out.println(y);
+		}catch(NumberFormatException e) {
+			e.printStackTrace();
+		}
+			System.out.println("welcome");
+			
+		}
+		
+	}
+
+output:java.lang.NumberFormatException: For input string: "10.3dasasad"
+	at java.base/jdk.internal.math.FloatingDecimal.check(FloatingDecimal.java:2324)
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1969)
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.base/java.lang.Double.parseDouble(Double.java:971)
+	at JAVA/P1.A.main(A.java:6)
+welcome
+
+what is class Upcasting ?
+--> Here we store child class object into parent class and reference variable,so that reference variable becomes re-usable
+//Example 1
+package P1;
+public class A {
+
+}
+a.java
+package P1;
+
+public class B extends A {
+
+}
+b.java
+package P1;
+
+public class C extends A {
+	public static void main(String[] args) {
+		 A a1 = new B();
+		 System.out.println(a1);
+		 a1= new C();
+		 System.out.println(a1);
+	}
+}
+c.java
+output:
+P1.B@2a84aee7
+P1.C@a09ee92
+// 
+
+
+
