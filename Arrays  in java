@@ -1,0 +1,42 @@
+Arrays in java:
+###############
+-> In java arrays holds collection of value
+-> Anything that holds colection of values is called as a data struture
+-> Array in java is treated as an object
+-> Arrays starts with index zero
+-> To store and read values we use this formula in arrays - start_address + index*memory_size
+-> Memory allocation happens to be in sequence(Continuous).
+
+Example 1:
+----------
+package p1;
+public class A {
+	public static void main(String[] args) {
+		int[] age = new int[4];
+		age[0] = 90;
+		age[1] = 89;
+		age[2] = 67;
+		age[3] = 97;
+	
+		System.out.println(age[0]);
+		System.out.println(age[1]);
+		System.out.println(age[2]);
+		System.out.println(age[3]);
+	} 
+	
+}
+
+-> To find size of an array dynamically we will use  public final field "length". When array is created this variable will get initiliazed
+Example : age.length
+Example 2:
+----------
+package p1;
+
+public class A {
+	public static void main(String[] args) {
+		int[] age = new int[40];
+		System.out.println(age.length);
+	} 
+	
+}
+Ouput: 40
